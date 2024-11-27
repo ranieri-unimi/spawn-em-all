@@ -1,4 +1,4 @@
-## 🎰 Spawn 'em all!
+# 🎰 Spawn 'em all!
 
 The goal of this project is to explore and analyze the underlying mechanisms behind the generative model used in Pokémon Go to determine Pokémon spawns.
 The project focuses on investigating how real-world factors, such as weather and location, influence the spawning of Pokémon, as well as the relationships between the attributes of Pokémon and their spawning patterns.  
@@ -21,24 +21,21 @@ Using these primary variables, additional derived variables were created to enri
 ## 🔧 Models families
 
 1. **Principal Component Analysis (PCA)**  
-
-    - **Objective**: Reduce the dimensionality of Pokémon features and simplify multivariate analysis.  
-    - **Findings**: Two and three components were tested, but the results were inconclusive due to low explained variance (Kaiser criterion not met).  
+  - **Objective**: Reduce the dimensionality of Pokémon features and simplify multivariate analysis.  
+  - **Findings**: Two and three components were tested, but the results were inconclusive due to low explained variance (Kaiser criterion not met).  
 
 2. **DBSCAN (Density-Based Spatial Clustering of Applications with Noise)**  
-
-    - **Objective**: Group Pokémon based on their attributes and identify outliers.  
-    - **Findings**: Clusters were not homogeneous, and the noise cluster was excessively large, even with adjustments to the radius (epsilon) parameter.  
+  - **Objective**: Group Pokémon based on their attributes and identify outliers.  
+  - **Findings**: Clusters were not homogeneous, and the noise cluster was excessively large, even with adjustments to the radius (epsilon) parameter.  
 
 3. **Logistic Regression (Bootstrapped)**  
-
-    - **Objective**: Link specific real-world variables (e.g., proximity to water) to the spawn frequency of Pokémon types.  
-    - **Findings**: Demonstrated that certain Pokémon types, such as water-related Pokémon, are more likely to spawn near water-related venues.
+  - **Objective**: Link specific real-world variables (e.g., proximity to water) to the spawn frequency of Pokémon types.  
+  - **Findings**: Demonstrated that certain Pokémon types, such as water-related Pokémon, are more likely to spawn near water-related venues.
 
 4. **Multiple Correspondence Analysis (MCA)**
-   - **Objective**: Analyze and visualize relationships between nominal categorical variables.
-   - **Outcome**: Helped to identify patterns and correlations between different nominal features, such as the tendency of fire Pokémon to spawn during cold nights in rural areas.
+  - **Objective**: Analyze and visualize relationships between nominal categorical variables.
+  - **Outcome**: Helped to identify patterns and correlations between different nominal features, such as the tendency of fire Pokémon to spawn during cold nights in rural areas.
 
 5. **Canonical Correlation Analysis (CCA)**
-   - **Objective**: Explore relationships between two sets of continuous variables.
-   - **Outcome**: Despite concerns about the normality of distances, CCA revealed interesting correlations, such as the spawning of fire Pokémon in colder temperatures.
+  - **Objective**: Explore relationships between two sets of continuous variables.
+  - **Outcome**: Despite concerns about the normality of distances, CCA revealed interesting correlations, such as the spawning of fire Pokémon in colder temperatures.
